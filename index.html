@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Flpkvs 的 AI 学习笔记与个人主页，记录大语言模型、机器学习与 AI 工具的学习心得。" />
+  <title>AI 学习笔记 · 个人主页</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">🤖 AI 学习笔记</a>
+      <nav class="nav">
+        <a href="#about">关于我</a>
+        <a href="#notes">学习笔记</a>
+        <a href="#contact">联系</a>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="切换主题">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-eyebrow">个人主页 · 开源协作实践</p>
+          <h1>你好，我是 <span class="highlight">Flpkvs</span> 👋</h1>
+          <p class="hero-lead">
+            一名正在学习人工智能的开发者。这里记录我关于
+            <strong>大语言模型</strong>、<strong>机器学习</strong> 与
+            <strong>AI 工具</strong> 的学习笔记，也是我的第一份开源作品。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#notes">开始阅读笔记 →</a>
+            <a class="btn btn-ghost" href="https://github.com/flpkvs" target="_blank" rel="noopener">GitHub 主页</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="card-demo">
+            <div class="card-demo-head"><span></span><span></span><span></span></div>
+            <pre><code><span class="c-key">import</span> numpy <span class="c-key">as</span> np
+
+<span class="c-comment"># 我的第一份开源贡献</span>
+<span class="c-fn">print</span>(<span class="c-str">"Hello, Open Source!"</span>)</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">关于我</h2>
+        <p class="section-sub">关于这个站点，以及我为什么要开始写笔记。</p>
+        <div class="about-grid">
+          <div class="about-card">
+            <span class="about-icon">🎯</span>
+            <h3>为什么做这个站</h3>
+            <p>
+              这是我第一次在 <strong>Agent 辅助</strong>下，走完「想主题 → 写内容 → 建仓库 →
+              commit/push → 发起 Pull Request」的完整开源协作闭环。站点本身是交付物，整个协作过程也是学习目标。
+            </p>
+          </div>
+          <div class="about-card">
+            <span class="about-icon">📚</span>
+            <h3>我会写什么</h3>
+            <p>
+              从大语言模型的工作原理，到机器学习基础概念，再到日常开发中用得上的
+              AI 工具。所有内容尽量用「人话」讲清楚，不堆砌公式。
+            </p>
+          </div>
+          <div class="about-card">
+            <span class="about-icon">🤝</span>
+            <h3>如何参与</h3>
+            <p>
+              如果你发现笔记有错误、想补充内容，欢迎通过 GitHub 发起 Issue 或
+              Pull Request。每一份贡献都会被认真对待。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notes -->
+    <section id="notes" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">学习笔记</h2>
+        <p class="section-sub">持续更新中 · 点击卡片进入阅读</p>
+        <div class="notes-grid">
+          <a class="note-card" href="notes/llm-basics.html">
+            <div class="note-badge">基础</div>
+            <h3>大语言模型（LLM）基础</h3>
+            <p>什么是 LLM、Token、上下文窗口与注意力机制——用最通俗的方式理解。</p>
+            <span class="note-meta">📅 2026-11 · ⏱ 约 8 分钟</span>
+          </a>
+          <a class="note-card" href="notes/machine-learning-intro.html">
+            <div class="note-badge">入门</div>
+            <h3>机器学习入门</h3>
+            <p>监督学习、无监督学习、过拟合与正则化，建立机器学习的整体地图。</p>
+            <span class="note-meta">📅 2026-11 · ⏱ 约 10 分钟</span>
+          </a>
+          <a class="note-card" href="notes/ai-tools.html">
+            <div class="note-badge">实践</div>
+            <h3>AI 辅助编程工具</h3>
+            <p>从 Copilot 到 Agent，如何用 AI 提高开发效率，以及如何高效协作。</p>
+            <span class="note-meta">📅 2026-11 · ⏱ 约 6 分钟</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container contact-inner">
+        <h2 class="section-title">找到我</h2>
+        <p class="section-sub">欢迎交流、指正与协作。</p>
+        <div class="contact-links">
+          <a class="btn btn-ghost" href="https://github.com/flpkvs" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-ghost" href="mailto:3167615052@qq.com">Email</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Flpkvs · 用 ❤️ 和一点 🤖 搭建</p>
+      <p><a href="https://github.com/flpkvs/ai-learning-notes" target="_blank" rel="noopener">查看本项目源码</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

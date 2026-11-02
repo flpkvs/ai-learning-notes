@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="用通俗的语言理解大语言模型：Token、上下文窗口、注意力机制与训练流程。" />
+  <title>大语言模型（LLM）基础 · AI 学习笔记</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html">🤖 AI 学习笔记</a>
+      <nav class="nav">
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="切换主题">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="article">
+      <header class="article-header">
+        <a class="article-back" href="../index.html#notes">← 返回笔记列表</a>
+        <h1>大语言模型（LLM）基础</h1>
+        <p class="article-meta">📅 2026-11-01 · ⏱ 约 8 分钟 · 🏷 基础</p>
+      </header>
+
+      <div class="article-body">
+        <p>
+          「大语言模型」是这两年最热的词，但抛开营销话术，它到底是怎么工作的？
+          这篇笔记用尽量通俗的语言，把几个核心概念串起来。
+        </p>
+
+        <h2>1. LLM 本质上是一个「接龙」机器</h2>
+        <p>
+          大语言模型的核心能力可以概括为：<strong>给定一段文字，预测下一个最可能出现的词</strong>。
+          它不断地「预测下一个词 → 把预测结果拼到原文后面 → 再预测下一个词」，如此循环，
+          就生成了整段文字。所以 ChatGPT 的回复是一个词一个词「长」出来的，而不是一次性生成的。
+        </p>
+        <blockquote>一句话理解：LLM = 超级强大的「文字接龙」程序。</blockquote>
+
+        <h2>2. Token：模型的「字/词」单位</h2>
+        <p>
+          模型并不直接处理汉字或字母，而是先把文本切成一个个 <strong>Token</strong>。
+          Token 可以是一个完整的词、一个字，甚至一个标点。不同语言的切分效率不同：
+        </p>
+        <ul>
+          <li>英文中一个常见单词通常对应 1 个 Token；</li>
+          <li>中文一个字往往对应 1~2 个 Token；</li>
+          <li>Token 数量直接影响成本与速度，也决定了「上下文窗口」能装多少内容。</li>
+        </ul>
+
+        <h2>3. 上下文窗口：模型的「短期记忆」</h2>
+        <p>
+          <strong>上下文窗口（Context Window）</strong>是模型一次能「看到」的最大 Token 数。
+          超出这个长度的内容会被截断，模型就「忘记」了。这也是为什么长对话里，
+          较早的信息可能会被模型忽略——不是它不认真，而是窗口装不下了。
+        </p>
+
+        <h2>4. 注意力机制：如何知道该「看」哪里</h2>
+        <p>
+          Transformer 架构的核心是 <strong>注意力机制（Attention）</strong>。
+          它让模型在处理每个 Token 时，能动态地决定「当前最该关注前面哪些 Token」。
+          比如句子「小明把书给了小红，因为她考试得了第一」，模型需要通过注意力判断
+          「她」到底指小明还是小红——这正是注意力机制擅长的事。
+        </p>
+
+        <h2>5. 训练的三个阶段</h2>
+        <ol>
+          <li><strong>预训练（Pre-training）：</strong>在互联网海量文本上学习「语言规律」，得到基座模型；</li>
+          <li><strong>指令微调（SFT）：</strong>用「问题-答案」样本教模型更好地服从指令、回答问题；</li>
+          <li><strong>对齐（RLHF 等）：</strong>让模型的回答更符合人类偏好——更有用、更安全、更诚实。</li>
+        </ol>
+
+        <h2>小结</h2>
+        <p>
+          把 Token、上下文窗口、注意力、训练流程这几个概念串起来，LLM 就不再神秘：
+          它是一个在海量文本上训练、用注意力机制理解上下文、靠「接龙」生成文字的模型。
+          理解了这些，再看各种模型发布的参数、上下文长度，就能看懂门道了。
+        </p>
+      </div>
+
+      <footer class="article-footer">
+        <a href="../index.html#notes">← 返回笔记列表</a>
+        <a href="machine-learning-intro.html">下一篇：机器学习入门 →</a>
+      </footer>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Flpkvs · 用 ❤️ 和一点 🤖 搭建</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

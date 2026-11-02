@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="从 Copilot 到 Agent：如何用 AI 辅助编程，以及高效协作的实践要点。" />
+  <title>AI 辅助编程工具 · AI 学习笔记</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html">🤖 AI 学习笔记</a>
+      <nav class="nav">
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="切换主题">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="article">
+      <header class="article-header">
+        <a class="article-back" href="../index.html#notes">← 返回笔记列表</a>
+        <h1>AI 辅助编程工具</h1>
+        <p class="article-meta">📅 2026-11-01 · ⏱ 约 6 分钟 · 🏷 实践</p>
+      </header>
+
+      <div class="article-body">
+        <p>
+          这个站点本身就是一次「Agent 辅助编程」的实践产物。这篇笔记记录我在这个过程中
+          对 AI 编程工具的理解与踩坑心得。
+        </p>
+
+        <h2>1. 从「补全」到「Agent」的演进</h2>
+        <ul>
+          <li><strong>代码补全（Copilot 类）：</strong>根据上下文预测你接下来要写的代码，适合「点状」加速；</li>
+          <li><strong>对话式助手：</strong>可以解释代码、生成函数、回答问题，适合「块状」任务；</li>
+          <li><strong>Agent：</strong>能自主拆解任务、执行命令、读写文件、迭代验证，适合「端到端」的完整任务。</li>
+        </ul>
+
+        <h2>2. 高效协作的几个要点</h2>
+        <ol>
+          <li><strong>目标要具体：</strong>把「做一个网站」拆成「做一个带暗色模式的静态笔记站」，Agent 的输出质量会高很多；</li>
+          <li><strong>上下文要给足：</strong>告诉它技术栈、约束、你的偏好，能大幅减少返工；</li>
+          <li><strong>分步验收：</strong>让 Agent 每完成一步就停下确认，比一口气生成全部更可控；</li>
+          <li><strong>人始终要复核：</strong>AI 会犯错，尤其是涉及安全、凭据、删除文件的操作，必须人工确认。</li>
+        </ol>
+
+        <h2>3. 一次完整的开源协作流程</h2>
+        <p>用 Agent 辅助完成一次 GitHub 协作，通常包含这几个环节：</p>
+        <pre><code>1. 想主题      —— 确定要做什么
+2. 写内容      —— 生成 README 与初版代码/文档
+3. 建仓库      —— git init / commit / push
+4. 发 PR       —— 写 PR 说明，发起 Pull Request
+5. 归档协作    —— 提交到组织或个人仓库留档</code></pre>
+
+        <h2>4. 我的几点心得</h2>
+        <ul>
+          <li>AI 极大降低了「从 0 到 1」的门槛，但「判断好与坏」仍然靠人；</li>
+          <li>把 AI 当成一位「精力无限的结对伙伴」，而不是替你全权做决定的「替身」；</li>
+          <li>版本控制（Git）是协作的底线——即使 AI 出错，也能轻松回滚。</li>
+        </ul>
+
+        <h2>小结</h2>
+        <p>
+          AI 编程工具的价值，在于把我们从重复劳动中解放出来，把注意力放在真正重要的
+          「设计、判断与验证」上。掌握「如何与 AI 高效协作」，本身就是一项新的核心竞争力。
+        </p>
+      </div>
+
+      <footer class="article-footer">
+        <a href="../index.html#notes">← 返回笔记列表</a>
+        <a href="llm-basics.html">← 上一篇：LLM 基础</a>
+      </footer>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Flpkvs · 用 ❤️ 和一点 🤖 搭建</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
